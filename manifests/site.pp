@@ -4,4 +4,9 @@ node default {
     content => 'E guuuuzice\n',
     owner => vmarkovi,
   }
+
+  file {'/root/vma':
+    ensure => directory,
+    owner => vmarkovi,
+  }
 }
