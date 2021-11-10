@@ -1,12 +1,10 @@
 node default {
-  file {'/root/veljko':
+  file { '/root/README':
     ensure => file,
-    content => 'E guuuuzice\n',
-    owner => vmarkovi,
+    content => 'This is a readme',
+    owner   => 'root',
   }
-
-  file {'/root/vma':
-    ensure => directory,
-    owner => vmarkovi,
-  }
+}
+node 'master.puppet.vm' {
+  include role::master_server
 }
